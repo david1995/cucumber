@@ -13,7 +13,7 @@ ifndef LIBRARY_VERSION
 	LIBRARY_VERSION=$(shell git rev-parse --abbrev-ref HEAD)
 endif
 
-default: .tested
+default: .packed
 .PHONY: default
 
 .built: $(SLN_FILES) $(CSPROJ_FILES) $(CSHARP_SOURCE_FILES)
@@ -22,6 +22,9 @@ default: .tested
 .tested: .built
 	dotnet test
 	touch $@
+
+.packed: .tested
+	dotnet pack -c Release -p:PrereleaseVersionPostfix="$(LIBRARY_VERSION)"
 
 clean: clean-java
 .PHONY: clean
