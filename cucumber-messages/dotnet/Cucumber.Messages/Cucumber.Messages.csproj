@@ -10,6 +10,7 @@
     <Authors>Cucumber Ltd</Authors>
     <Description>Protocol Buffer messages for Cucumber's inter-process communication</Description>
     <Copyright>Copyright © Cucumber Ltd</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIconUrl>https://cucumber.io/images/cucumber-mark-32x32.png</PackageIconUrl>
     <PackageTags>cucumber-messages cucumber specflow gherkin</PackageTags>
     <PackageOutputPath>$(MSBuildThisFileDirectory)/../GeneratedNuGetPackages</PackageOutputPath>
