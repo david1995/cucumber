@@ -4,6 +4,19 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
+  <PropertyGroup Label="Package Properties">
+    <PackageId>Cucumber.Messages</PackageId>
+    <Title>Cucumber.Messages</Title>
+    <Authors>Cucumber Ltd</Authors>
+    <Description>Protocol Buffer messages for Cucumber's inter-process communication</Description>
+    <Copyright>Copyright © Cucumber Ltd</Copyright>
+    <PackageIconUrl>https://cucumber.io/images/cucumber-mark-32x32.png</PackageIconUrl>
+    <PackageTags>cucumber-messages cucumber specflow gherkin</PackageTags>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)/../GeneratedNuGetPackages</PackageOutputPath>
+    <RepositoryUrl>https://github.com/cucumber/cucumber/tree/cucumber-messages-dotnet/cucumber-messages</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.7.0" />
     <PackageReference Include="Grpc.Tools" Version="1.20.1">
