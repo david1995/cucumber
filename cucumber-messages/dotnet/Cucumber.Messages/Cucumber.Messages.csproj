@@ -8,7 +8,7 @@
     <PackageId>Cucumber.Messages</PackageId>
     <Title>Cucumber.Messages</Title>
     <Authors>Cucumber Ltd</Authors>
-    <Description>Protocol Buffer messages for Cucumber's inter-process communication</Description>
+    <Description>Protocol Buffer messages for Cucumber's and SpecFlow's inter-process communication</Description>
     <Copyright>Copyright © Cucumber Ltd</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIconUrl>https://cucumber.io/images/cucumber-mark-32x32.png</PackageIconUrl>
