@@ -13,7 +13,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIconUrl>https://cucumber.io/images/cucumber-mark-32x32.png</PackageIconUrl>
     <PackageTags>cucumber-messages cucumber specflow gherkin</PackageTags>
-    <PackageOutputPath>$(MSBuildThisFileDirectory)/../GeneratedNuGetPackages</PackageOutputPath>
+    <PackageOutputPath Condition="'$(SolutionDir)' != ''">$(SolutionDir)/GeneratedNuGetPackages/$(Configuration)</PackageOutputPath>
+    <PackageOutputPath Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)/../GeneratedNuGetPackages/$(Configuration)</PackageOutputPath>
     <RepositoryUrl>https://github.com/cucumber/cucumber/tree/cucumber-messages-dotnet/cucumber-messages</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
