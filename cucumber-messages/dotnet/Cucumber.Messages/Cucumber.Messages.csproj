@@ -2,7 +2,9 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
-
+    <VersionNumber>1.0.0</VersionNumber>
+    <Version Condition="'$(Version)' == '' and '$(PrereleaseVersionPostfix)' != ''">$(VersionNumber)-$(PrereleaseVersionPostfix)</Version>
+    <Version Condition="'$(Version)' == ''">$(VersionNumber)</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="Package Properties">
@@ -10,8 +12,7 @@
     <Title>Cucumber.Messages</Title>
     <Authors>Cucumber Ltd</Authors>
     <Description>Protocol Buffer messages for Cucumber's and SpecFlow's inter-process communication</Description>
-    <PackageVersion Condition="'$(PackageVersion)' == '' and '$(PrereleaseVersionPostfix)' != ''">$(Version)-$(PrereleaseVersionPostfix)</PackageVersion>
-    <PackageVersion Condition="'$(PackageVersion)' == ''">$(Version)</PackageVersion>
+    <PackageVersion>$(Version)</PackageVersion>
     <Copyright>Copyright © Cucumber Ltd</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIconUrl>https://cucumber.io/images/cucumber-mark-32x32.png</PackageIconUrl>
