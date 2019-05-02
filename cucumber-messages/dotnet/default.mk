@@ -17,7 +17,7 @@ default: .packed
 .PHONY: default
 
 .built: $(SLN_FILES) $(CSPROJ_FILES) $(CSHARP_SOURCE_FILES)
-	dotnet build -bl
+	dotnet build -bl -c Release
 
 .tested: .built
 	dotnet test
